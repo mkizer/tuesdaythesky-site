@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Note from '~/components/widgets/Note.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import YouTubeEmbed from '~/components/common/YouTubeEmbed.astro';
+
+const metadata = {
+  title: 'North Sea Echoes',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    isBeforeContent
+    isReversed
+    items={[
+      {
+        title: 'Jeff Wagner, author of the Fates Warning book "Destination Onward"',
+        description:
+          '"Throughout Really Good Terrible Things [debut album], Matheos and Alder serve up the kind of seductive melancholy Fates Warning fans will recognize. Yet there’s a thoroughly different approach here: vocals are delivered with a sort of nostalgic sadness, and the guitar work is layered in such a way as to feel dreamlike. These are rich sonic landscapes, visiting places haunting, beautiful, spectral and secret. The Matheos/Alder partnership is taken to some new and wonderful places here."',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/NSE_2024_05.jpg',
+      alt: 'North Sea Echoes 2024',
+      caption: 'Photo by Laurie Matheos',
+      captionJustification: 'right',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">North Sea Echoes</h3>
+      A project by Ray Alder and Jim Matheos
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="How to Cast a Shadow" description="~ new album out now!" />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    isBeforeContent
+    image={{
+      src: '~/assets/images/HTCAS_cover.jpg',
+      alt: 'How to Cast a Shadow (2026)',
+      caption: 'How to Cast a Shadow (2026)',
+      captionJustification: 'center',
+    }}
+  >
+    <Fragment slot="content">
+      <YouTubeEmbed id="SCT5So6Jmlc" title="Good Enough" class="w-full max-w-[560px]" />
+      <br />
+      <YouTubeEmbed id="tkPqCTGQQhc" title="I'll Leave a Light On" class="w-full max-w-[560px]" />
+      <br />
+      <YouTubeEmbed id="sbXCX_P617k" title="Enjoy the View" class="w-full max-w-[560px]" />
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- LatestPosts Widget ******* -->
+
+  <BlogLatestPosts
+    isBeforeContent
+    title="Latest News"
+    information={`The latest news, announcements, and updates from North Sea Echoes.`}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    image={{
+      src: '~/assets/images/HTCAS_cover.jpg',
+      alt: 'How to Cast a Shadow',
+      width: 300,
+      height: 300,
+    }}
+    imagePosition="left"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Order Here',
+        href: 'https://www.metalblade.com/northseaechoes/',
+        target: '_blank',
+        icon: 'tabler:external-link',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">"How to Cast a Shadow"</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">New album out now!</Fragment>
+  </CallToAction>
+</Layout>

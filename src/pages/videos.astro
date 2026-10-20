@@ -1,0 +1,164 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import YouTubeEmbed from '~/components/common/YouTubeEmbed.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Videos | North Sea Echoes',
+  description: 'Official music videos and visualizers for North Sea Echoes',
+};
+
+const videos = [
+  {
+    title: `"Good Enough" (Official Video)`,
+    album: 'How to Cast a Shadow (2026)',
+    videoId: 'SCT5So6Jmlc',
+    notes: [
+      `"Good Enough" is the third single released from 2026's "How to Cast a Shadow".`,
+      `Official video shot by Jeremy Saffer (<a href="https://jeremysaffer.com/" target="_blank" rel="noopener noreferrer">jeremysaffer.com</a>). Edited by Vince Edwards`,
+      `Ray Alder on this track: "’Good Enough‘ was one of the first songs written for How To Cast A Shadow. It‘s a simple yet beautiful song, and it quickly became one of my favorite songs that Jim and I had written together. While we never intended for it to be released as a single or video we decided that while we were together for a photo shoot we would also shoot a video for this. I think that we both agreed that this song was just too nice not to be shared with others."`,
+      `Personnel: Ray Alder (Vocals), Jim Matheos (Guitar / Programming), Dennis Leeflang (Drums).`,
+      `Published by Metal Blade Records. Buy the album at <a href="https://www.metalblade.com/northseaechoes" target="_blank" rel="noopener noreferrer">metalblade.com/northseaechoes</a>.`,
+    ],
+  },
+  {
+    title: `"I'll Leave a Light On" (Official Video)`,
+    album: 'How to Cast a Shadow (2026)',
+    videoId: 'tkPqCTGQQhc',
+    notes: [
+      `"I'll Leave a Light On" is the second single released from 2026's "How to Cast a Shadow".`,
+      `Official video created by Simon Ward for 1d3ntity (<a href="https://identity-media.co.uk" target="_blank" rel="noopener noreferrer">identity-media.co.uk</a>).`,
+      `Ray Alder on this track: "'I'll Leave a Light On' is much heavier than anything on Really Good Terrible Things, the first NSE album. It has a darker melancholic feel that fits well on this album. I loosely based the lyrics on a character from my favorite sci-fi series. I won't say which, but they do use the quote 'out there in the black'."`,
+      `Personnel: Ray Alder (Vocals), Jim Matheos (Guitar / Programming), Dennis Leeflang (Drums).`,
+      `Published by Metal Blade Records. Buy the album at <a href="https://www.metalblade.com/northseaechoes" target="_blank" rel="noopener noreferrer">metalblade.com/northseaechoes</a>.`,
+    ],
+  },
+  {
+    title: `"Enjoy the View" (Official Video)`,
+    album: 'How to Cast a Shadow (2026)',
+    videoId: 'sbXCX_P617k',
+    notes: [
+      `The lead single off North Sea Echoes' second full-length album "How to Cast a Shadow".`,
+      `Official music video released by Metal Blade Records.`,
+      `Written, performed, and recorded by Jim Matheos and Ray Alder, featuring acoustic drum performance by Dennis Leeflang.`,
+      `Mixed and produced by Jim Matheos. Mastered by Harry Hess at HBomb Mastering.`,
+    ],
+  },
+  {
+    title: `"The Mission" (Official Video)`,
+    album: 'Really Good Terrible Things (2024)',
+    videoId: 'MkvXVHHr-8Q',
+    notes: [
+      `The fifth single off the debut album "Really Good Terrible Things".`,
+      `Animated official video created by Nadeera Abeywansha.`,
+      `Ray Alder shares on the lyrical narrative: "A man experiences a psychotic episode in which he hears voices. I think this is pretty obvious. This was the last song written for the album. It almost didn’t make it. Jim thought the album was a bit too short so we added it last minute. I’m glad we did. It’s one of my favorites."`,
+    ],
+  },
+  {
+    title: `"Throwing Stones" (Official Video)`,
+    album: 'Really Good Terrible Things (2024)',
+    videoId: 'dQH-oSChCUE',
+    notes: [
+      `The fourth single off "Really Good Terrible Things".`,
+      `Animated official video created by Patrick Atkins (<a href="https://www.patrickatkins.co.uk/" target="_blank" rel="noopener noreferrer">patrickatkins.co.uk</a>). Visit his website to view storyboards from the video.`,
+      `Ray Alder shares on "Throwing Stones": "This is a strange one. Some people have a fear of happiness. They feel that something painful always follows pleasure. So they're sort of locked into this world where they try to feel nothing. It's called Cherophobia."`,
+      `Patrick Atkins also created the artwork for Fates Warning's album "Long Day Good Night" and an animated video for "Begin Again".`,
+    ],
+  },
+  {
+    title: `"Empty" (Official Video)`,
+    album: 'Really Good Terrible Things (2024)',
+    videoId: 'RjGl1d2SqnU',
+    notes: [
+      `The third single off "Really Good Terrible Things"`,
+      `Video credits: Director / Camera / Editor / FX: David Brodsky for MyGoodEye Music Visuals. Producer / Cameras: Allison Woest.`,
+      `When asked what fans can expect from the new track, Alder keeps it short and not-so-sweet, “I think this one is pretty dark.”`,
+    ],
+  },
+  {
+    title: `"Unmoved" (Official Video)`,
+    album: 'Really Good Terrible Things (2024)',
+    videoId: 'gYwMU74vAlg',
+    notes: [
+      `The second single off "Really Good Terrible Things", featuring both Ray Alder and Jim Matheos.`,
+      `Video credits: Director / Camera / Editor / FX: David Brodsky for MyGoodEye Music Visuals. Producer / Cameras: Allison Woest.`,
+      `Ray Alder shares on the lyrical concepts behind "Unmoved": "Some people dealing with depression often exhibit a remarkable ability to conceal their inner struggles by presenting a façade of happiness to the world."`,
+    ],
+  },
+  {
+    title: `"Open Book" (Lyric Video)`,
+    album: 'Really Good Terrible Things (2024)',
+    videoId: 'dvYfsvcjjPo',
+    notes: [
+      `The first single off "Really Good Terrible Things".`,
+      `Lyric Video by Simon Ward for 1d3ntity (<a href="https://identity-media.co.uk" target="_blank" rel="noopener noreferrer">identity-media.co.uk</a>).`,
+      `Matheos shares, “with Ray’s lyrics about ending and beginnings, it felt like a good mood to start off with.”`,
+      `Alder adds, “The line ‘we’re a cloud behind the moon’ is referring to the fact that we are all basically an impossibility. Yet here we are. And we will go on until we can’t. I’m speaking of inevitability.”`,
+    ],
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Videos</h1>
+      <p class="mt-4 text-lg text-neutral-400 font-medium">Official Music Videos & Visualizers</p>
+    </div>
+
+    <div class="space-y-12">
+      {
+        videos.map((video) => (
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch border border-neutral-800 bg-neutral-900/30 rounded-xl p-4 sm:p-6 shadow-lg">
+            {/* Left Column: YouTube Facade (Click-to-Play via custom YouTubeEmbed) */}
+            <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-neutral-800 bg-black">
+              <YouTubeEmbed id={video.videoId} title={video.title} class="w-full h-full" />
+            </div>
+
+            {/* Right Column: Scrollable Notes Section matching video height */}
+            <div class="flex flex-col h-full max-h-[300px] md:max-h-none overflow-hidden rounded-lg border border-neutral-800/80 bg-neutral-900/60 p-5">
+              <div class="mb-3 border-b border-neutral-800 pb-3 flex flex-wrap items-start justify-between gap-2">
+                <div>
+                  <h2 class="text-xl font-bold text-white">{video.title}</h2>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-neutral-400">{video.album}</span>
+                </div>
+                <a
+                  href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-red-300 hover:text-white bg-red-600/20 hover:bg-red-600 rounded-md border border-red-500/30 transition-all duration-150 shrink-0"
+                >
+                  <Icon name="tabler:brand-youtube" class="w-4 h-4 text-red-500 hover:text-white" />
+                  <span>Watch on YouTube</span>
+                  <Icon name="tabler:external-link" class="w-3 h-3 opacity-70" />
+                </a>
+              </div>
+              <div class="overflow-y-auto flex-1 pr-2 text-sm text-neutral-300 space-y-3 custom-scrollbar [&_a]:text-accent [&_a]:underline hover:[&_a]:text-white">
+                {video.notes.map((paragraph) => (
+                  <p class="leading-relaxed" set:html={paragraph} />
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+</style>

@@ -1,0 +1,362 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Bio',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+  <HeroText title="Biography" tagline="North Sea Echoes" />
+
+  <!-- Band Profiles Widget ******************* -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+    <div class="grid sm:grid-cols-2 gap-12 sm:gap-16 justify-center">
+      <!-- Ray Alder -->
+      <div class="flex flex-col items-center text-center group">
+        <div
+          class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg border-4 border-stone-200 dark:border-stone-800 transition-transform duration-300 group-hover:scale-105"
+        >
+          <Image
+            src="~/assets/images/ray_2024_01_300x300rev.png"
+            alt="Ray Alder"
+            class="object-cover w-full h-full"
+            width={300}
+            height={300}
+          />
+        </div>
+        <h3 class="mt-6 text-2xl font-bold tracking-tight dark:text-white font-heading">Ray Alder</h3>
+        <p class="text-stone-600 dark:text-slate-400 text-sm mt-1">Vocals</p>
+        <div class="w-12 h-0.5 bg-secondary dark:bg-accent my-3"></div>
+        <div class="flex space-x-4 mt-2">
+          <a
+            href="https://twitter.com/realrayalder"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-stone-500 hover:text-primary dark:text-stone-400 dark:hover:text-accent transition-colors"
+            aria-label="Ray Alder X (Twitter)"
+          >
+            <Icon name="tabler:brand-x" class="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.facebook.com/RayAlderOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-stone-500 hover:text-primary dark:text-stone-400 dark:hover:text-accent transition-colors"
+            aria-label="Ray Alder Facebook"
+          >
+            <Icon name="tabler:brand-facebook" class="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.instagram.com/rayalderofficial/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-stone-500 hover:text-primary dark:text-stone-400 dark:hover:text-accent transition-colors"
+            aria-label="Ray Alder Instagram"
+          >
+            <Icon name="tabler:brand-instagram" class="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Jim Matheos -->
+      <div class="flex flex-col items-center text-center group">
+        <div
+          class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden shadow-lg border-4 border-stone-200 dark:border-stone-800 transition-transform duration-300 group-hover:scale-105"
+        >
+          <Image
+            src="~/assets/images/jim_2024_01_300x300rev.png"
+            alt="Jim Matheos"
+            class="object-cover w-full h-full"
+            width={300}
+            height={300}
+          />
+        </div>
+        <h3 class="mt-6 text-2xl font-bold tracking-tight dark:text-white font-heading">Jim Matheos</h3>
+        <p class="text-stone-600 dark:text-slate-400 text-sm mt-1">Guitar / Programming</p>
+        <div class="w-12 h-0.5 bg-secondary dark:bg-accent my-3"></div>
+        <div class="flex space-x-4 mt-2">
+          <a
+            href="https://www.facebook.com/JimMatheosOfficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-stone-500 hover:text-primary dark:text-stone-400 dark:hover:text-accent transition-colors"
+            aria-label="Jim Matheos Facebook"
+          >
+            <Icon name="tabler:brand-facebook" class="w-6 h-6" />
+          </a>
+          <a
+            href="https://jimmatheos.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-stone-500 hover:text-primary dark:text-stone-400 dark:hover:text-accent transition-colors"
+            aria-label="Jim Matheos Website"
+          >
+            <Icon name="tabler:world" class="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Widget: How to Cast a Shadow (2026) ****************** -->
+  <Content
+    isAfterContent
+    isBeforeContent
+    isReversed={true}
+    image={{
+      src: '~/assets/images/NSE_2026_01.jpg',
+      alt: 'North Sea Echoes (2026)',
+      caption: 'Photo by Jeremy Saffer',
+      captionJustification: 'right',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4 font-heading">
+        How to Cast a Shadow (2026)
+      </h2>
+      <div class="mb-6 font-semibold dark:text-slate-200">
+        <p>Ray Alder: Vocals</p>
+        <p>Jim Matheos: Guitar / Programming</p>
+      </div>
+      <div class="space-y-4 text-justify">
+        <p>
+          On <strong>North Sea Echoes</strong> critically acclaimed 2024 debut, singer Ray Alder and guitarist Jim Matheos
+          garnered raves for songs that possess <em
+            >"liberating sonic space and emotional vulnerability… from somnambulant electro-fog to gritty, overdriven
+            disquiet, to the quietly devastating."</em
+          > (<strong>Blabbermouth</strong>)
+        </p>
+        <p>
+          With 2026's <em><strong>How to Cast a Shadow</strong></em>, North Sea Echoes' identity is further explored and
+          expanded. Matheos explains, <em
+            >"this record is a bit heavier, with several more songs featuring real drums, played by Dennis Leeflang. It
+            wasn't necessarily intentional or planned, just the way things shaped up and how they emerged this time."</em
+          >
+        </p>
+        <p>
+          Alder concurs. <em
+            >"'I'll Leave a Light On' is much heavier than anything on Really Good Terrible Things, the first NSE album.
+            It has a darker melancholic feel that fits well on this album. I loosely based the lyrics on a character
+            from my favorite sci-fi series. I won't say which, but they do use the quote 'out there in the black.'"</em
+          >
+        </p>
+        <p>
+          From the radio-ready rock of <em>"All That Comes After"</em> to intimate, escalating <em
+            >"A Time of Innocence and Purpose"</em
+          > to the powerful, timeless ballad <em>"Villains or Saints,"</em>
+          <strong>How to Cast a Shadow</strong> cohesively crosses genres and challenges aural preconceptions.
+        </p>
+        <p>
+          The music that became the title track inspired lyricist Alder. <em
+            >"When Ray sent his ideas for this one, it immediately stood out for me as a title track,"</em
+          > Matheos says. <em
+            >"A combination of title/lyrics/ imagery, and the song itself being a bit longer and having a lot of the
+            elements of what NSE sounds like made it a natural choice for me."</em
+          >
+        </p>
+        <p>
+          <strong>North Sea Echoes</strong> have been praised for Matheos and Adler <em
+            >"maintaining their distinctive identity throughout, neither relying on proven past endeavors nor abandoning
+            them completely."</em
+          > Indeed, the band and <strong>How to Cast a Shadow</strong> use the duo's shared and separate histories to forge
+          a fresh creative opus. Their credits are the stuff of metal legend: Alder has been the vocalist and main co-writer
+          for prog metal heroes <strong>Fates Warning</strong> for 37 years, recording 10 albums between 1988 (<em
+            ><strong>No Exit</strong></em
+          >) and 2020 (<em><strong>Long Day Good Night</strong></em>). Rounding out his discography are seven albums
+          with <strong>Redemption</strong>, two solo records, and the band <strong>A-Z</strong>, which debuted in 2022.
+        </p>
+        <p>
+          Revered guitar/producer Matheos is a co-founder of <strong>Fates Warning</strong>, the lineup debuting with
+          1984's <em><strong>Night on Bröcken</strong></em> on Metal Blade. In addition to 13 albums with <strong
+            >Fates</strong
+          >, Matheos launched several solo albums, four LPs alongside former <strong>Dream Theater</strong> keyboardist Kevin
+          Moore under the name <strong>OSI</strong>, and <strong>Kings of Mercia</strong>, who launched in 2022.
+        </p>
+        <p>
+          In the last couple years, the ever-prolific Matheos wrote a bunch of material-about 25 songs-track that could
+          perhaps wind up in any one of his musical endeavors. The guitarist and singer were ready to work on what would
+          become the second <strong>North Sea Echoes</strong> album, and <em
+            >"I started sending Ray batches of this material, and he picked ones he wants to work on,"</em
+          > Matheos says.
+        </p>
+        <p>
+          Other standout tracks include <em>"Enjoy the View."</em>
+          <em>"The guitars and drums have this great drive that builds throughout the song."</em> Alder says. <em
+            >"The combination of quiet verses and heavy choruses made me think (lyrically) of a darker side to some
+            people. Those who would choose numbness over pain."</em
+          >
+        </p>
+        <p>
+          <em>"Villains Or Saints"</em> is another band favorite, and <strong>NSE</strong> also feels fortunate that they
+          found the perfect artwork to complement <em><strong>How to Cast a Shadow</strong></em>. Lauded British
+          painter-turned-photographer Chris Friel contributed the cover art. Matheos has worked with Friel in the past (<strong
+            >Arch/Matheos</strong
+          >, <strong>Tuesday the Sky</strong>) and while these particular images were initially intended for a previous <strong
+            >Tuesday the Sky</strong
+          > record, <em
+            >"when we decided the title for this one we realized those images fit perfectly on How to Cast a Shadow,"</em
+          > Matheos explains.
+        </p>
+        <p>
+          Reflecting on <strong>North Sea Echoes</strong>' sophomore album, the duo says, <em
+            >"I guess you could say that there are elements of everything we do or have done on this album, yet Fates
+            and our various other projects are totally different types of music."</em
+          > If <em><strong>Really Good Terrible Things</strong></em> kickstarted <strong>NSE</strong>'s career with <em
+            >"hovering subtleties, introspective thoughtful reflections"</em
+          > and lyrics with <em>"wisdom and authenticity,"</em>
+          <em><strong>How to Cast a Shadow</strong></em> ups the promise of its predecessor. Provocative words of hope, sorrow
+          and consciousness are paired with Matheos' equally emotive, varied and deeply moving guitar work.
+        </p>
+        <p>
+          As Alder sings on <em>"All Fall Away,"</em>
+          <em
+            >"Days blurring into days while bridges turn to rust, nothing flows beneath just stone and dust / And those
+            times we feel more lost than found, more let go than held are the moments we become ourselves."</em
+          >
+        </p>
+        <p>
+          <em
+            >"Let it all fall away let it all turn to gray / Give back that borrowed time and take off that mask / Then
+            turn to face the path ahead."</em
+          >
+        </p>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: Really Good Terrible Things (2024) ****************** -->
+  <Content
+    isAfterContent
+    isBeforeContent
+    isReversed={false}
+    image={{
+      src: '~/assets/images/NSE_2024_01.jpg',
+      alt: 'Jim Matheos and Ray Alder (2024)',
+      caption: 'Photo by Jeremy Saffer',
+      captionJustification: 'right',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4 font-heading">
+        Really Good Terrible Things (2024)
+      </h2>
+      <div class="space-y-6 text-justify">
+        <div>
+          <h3 class="text-lg font-bold tracking-tight dark:text-white mb-2 font-heading uppercase text-secondary">
+            History
+          </h3>
+          <p class="text-muted dark:text-slate-400">
+            <strong>Ray Alder</strong> and <strong>Jim Matheos</strong>’ musical legacy is vast and lauded, both as
+            collaborators and individuals. Alder has been the vocalist and main co-writer for prog metal heroes <strong
+              >Fates Warning</strong
+            > for the past 35 years. With them he has recorded 10 albums between <em><strong>1988 (No Exit)</strong></em
+            > and <em><strong>2020 (Long Day Good Night)</strong></em>. Further rounding out his discography are seven
+            albums with Redemption, two solo albums, and the band A-Z with Mark Zonder, which debuted in 2022.
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            Prolific and pioneering guitarist/producer <strong>Matheos</strong> is a co-founder of <strong
+              >Fates Warning</strong
+            >, the lineup debuting with <em><strong>1984’s Night on Bröcken</strong></em> on Metal Blade. In addition to 13
+            albums with Fates, <strong>Matheos</strong>’ myriad other work includes several solo albums, four albums
+            alongside former Dream Theater keyboardist Kevin Moore, under the name OSI, and new band, Kings of Mercia, a
+            lineup that’s been termed “a hybrid; it’s heavy, but not metal.”
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold tracking-tight dark:text-white mb-2 font-heading uppercase text-secondary">
+            North Sea Echoes
+          </h3>
+          <p class="text-muted dark:text-slate-400">
+            On <strong>North Sea Echoes</strong>’ debut album, <em><strong>Really Good Terrible Things</strong></em>,
+            the duo embark upon a fresh musical journey, a new chapter of intimate, moody, and evocative songs
+            highlighted by the singles <em>“Open Book,” “Empty,” “Throwing Stones.”</em>
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            <em
+              >“Throughout <strong>Really Good Terrible Things</strong>, <strong>Matheos</strong> and <strong
+                >Alder</strong
+              > serve up the kind of seductive melancholy Fates Warning fans will recognize,”</em
+            > says Jeff Wagner, author of the Fates Warning book Destination Onward. <em
+              >“Yet there's a thoroughly different approach here: vocals are delivered with a sort of nostalgic sadness,
+              and the guitar work is layered in such a way as to feel dreamlike. These are rich sonic landscapes,
+              visiting places haunting, beautiful, spectral and secret. The Matheos/Alder partnership is taken to some
+              new and wonderful places here,”</em
+            > Wagner concludes.
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            <strong>Matheos</strong> and <strong>Alder</strong> began talking about working together again as soon as they
+            completed <strong>Fates Warning</strong>’s <em><strong>Long Day Good Night</strong></em>. <em
+              >“We just didn’t know what, when, where,”</em
+            > says <strong>Matheos</strong>. <em
+              >“I had begun work on another Tuesday the Sky record, which is an ambient, mostly instrumental, pet
+              project of mine. But the first songs I’d come up with felt like they were more set up for vocals. Ray and
+              I had done something similar on Long Days Good Night, a song called ‘When Winter Falls,’ and we both
+              really liked the outcome. So I asked him if he’d be onto doing a whole record with a similar approach.”</em
+            >
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            The resultant <strong>Really Good Terrible Things</strong> was produced by Matheos with cover art from Simon Ward
+            (Kings of Mercia, Marillion). <em><strong>“Open Book”</strong></em> kicks off the record, and was also the first
+            song written. <strong>Matheos</strong> felt that <em
+              >“with Ray’s lyrics about ending and beginnings, it felt like a good mood to start off with.”</em
+            >
+            <strong>Alder</strong> adds: <em
+              >“The line ‘we’re a cloud behind the moon’ is referring to the fact that we are all basically an
+              impossibility. Yet here we are. And we will go on until we can’t. I’m speaking of inevitability.”</em
+            >
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold tracking-tight dark:text-white mb-2 font-heading uppercase text-secondary">
+            Really Good Terrible Things
+          </h3>
+          <p class="text-muted dark:text-slate-400">
+            The ominous-sounding <em><strong>“Empty”</strong></em> begins with <strong>Matheos</strong>’ atmospheric
+            guitar work and features a powerful drum performance by Gunnar Olsen (Puscifer). <em
+              ><strong>“Throwing Stones”</strong></em
+            >, also with Olsen on drums, sees the pair tapping their vast influences to create one of the most immediate
+            tracks on the record. Lyrically it’s about something called <em>“Cherophobia,”</em> as <strong>Alder</strong
+            > explains: <em
+              >“Some people have a fear of happiness. They feel that something painful always follows pleasure. So
+              they’re sort of locked into this world where they try to feel nothing, and that’s what Cherophobia is, and
+              what inspired the lyrics.”</em
+            >
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            One of <strong>Matheos</strong>’ favorite tracks is <em><strong>“No Maps”</strong></em>. <strong
+              >Matheos</strong
+            > had a concept for the lyrics, and <strong>Alder</strong> took it from there: <em
+              >“The track was much, much different than what ended up on the album. On the demo there was the sound of a
+              freight train quietly moving down the tracks throughout the entire song, along with acoustic guitars. Jim
+              said it reminded him of hobos. So I thought I’d write about a wanderer who is happiest being alone. Kind
+              of romantic to me, in a weird way.”</em
+            >
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            The songwriting process was as familiar one for the Fates Warning vets: <strong>Matheos</strong> demos music,
+            then passes it along to <strong>Alder</strong>. <em
+              >“If he likes the song, he’ll start coming up with lyrics and melodies. After that, the song will tend go
+              through further changes, sometimes minor, sometimes major, as the final form starts to take shape,”</em
+            > explains <strong>Matheos</strong>.
+          </p>
+          <p class="text-muted dark:text-slate-400 mt-2">
+            <strong>Really Good Terrible Things</strong> shows the breadth and versatility of the acclaimed pair, along with
+            a freshness that belies their long musical partnership. <em
+              >“We both still love making music and we really enjoy working together. There’s a good amount of chemistry
+              there, I think,”</em
+            >
+            <strong>Matheos</strong> concludes. <em>“We both know what to expect from each other.”</em>
+          </p>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
+</Layout>

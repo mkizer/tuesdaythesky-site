@@ -1,0 +1,144 @@
+---
+import Layout from '~/layouts/PageLayout.astro'; // Or your standard AstroWind layout
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { getGalleryImageMeta } from '~/data/galleryMetadata';
+
+// 1. Automatically grab all images from the gallery directory at build time and sort descending by filename
+const imageModules = import.meta.glob<{ default: ImageMetadata }>('../assets/images/gallery/*.{jpeg,jpg,png,webp}', {
+  eager: true,
+});
+
+const images = Object.entries(imageModules)
+  .sort(([pathA], [pathB]) => pathB.localeCompare(pathA))
+  .map(([path, module]) => {
+    const filename = path.split('/').pop() || '';
+    const meta = getGalleryImageMeta(filename);
+    return {
+      src: module.default,
+      filename,
+      meta,
+    };
+  });
+
+const metadata = {
+  title: 'Images | North Sea Echoes',
+  description: 'Promotional Photos',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Images</h1>
+      <p class="mt-4 text-lg text-neutral-400 font-medium">Promotional Photos</p>
+      <p class="mt-4 text-sm text-neutral-400">
+        Photos courtesy of <a
+          href="https://jeremysaffer.com/"
+          target="_blank"
+          class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+          >Jeremy Saffer</a
+        > | Additional photos provided by Laurie Matheos | Click to view details.
+      </p>
+    </div>
+
+    <!-- Grid Container (Left-to-Right layout) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-start">
+      {
+        images.map((img, index) => (
+          <div>
+            {/* 1. Clickable Card triggers the dialog via inline JavaScript button behavior */}
+            <button
+              onclick={`document.getElementById('dialog-${index}').showModal()`}
+              class="w-full text-left overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900/30 transition-all duration-300 hover:scale-[1.01] hover:border-neutral-700 block"
+            >
+              <Image
+                src={img.src}
+                alt={img.meta.description || 'North Sea Echoes promotional photo'}
+                width={600}
+                class="w-full h-auto object-cover"
+              />
+            </button>
+          </div>
+        ))
+      }
+    </div>
+
+    {/* 2. Hidden Backdrop Dialogs placed outside the masonry grid to prevent column positioning issues */}
+    {
+      images.map((img, index) => (
+        <dialog
+          id={`dialog-${index}`}
+          class="fixed inset-0 z-50 p-0 m-auto bg-transparent backdrop:bg-black/80 backdrop:backdrop-blur-sm max-w-[90vw] max-h-[90vh] rounded-lg overflow-hidden focus:outline-none"
+          onclick="this.close()"
+        >
+          <form method="dialog" class="relative flex flex-col justify-between max-h-[90vh]">
+            {/* Close Button */}
+            <button class="absolute top-4 right-4 z-50 bg-black/60 text-white hover:bg-black/90 w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold transition">
+              ✕
+            </button>
+            {/* High-Res Render inside Modal */}
+            <Image
+              src={img.src}
+              alt={img.meta.description || 'Full screen view'}
+              width={1400}
+              class="max-w-full max-h-[75vh] object-contain mx-auto"
+            />
+            {/* Caption Bar */}
+            <div
+              class="w-full bg-neutral-900/90 backdrop-blur-md p-4 text-center border-t border-neutral-800 text-white"
+              onclick="arguments[0]?.stopPropagation()"
+            >
+              <p class="text-sm font-semibold text-neutral-200">
+                {img.meta.credits.length > 0 && (
+                  <span>
+                    Photo by{' '}
+                    {img.meta.credits.map((credit, idx) => (
+                      <>
+                        {credit.url ? (
+                          <a
+                            href={credit.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="underline decoration-neutral-500 hover:decoration-white hover:text-white transition-colors"
+                          >
+                            {credit.name}
+                          </a>
+                        ) : (
+                          <span>{credit.name}</span>
+                        )}
+                        {idx < img.meta.credits.length - 1 && ', '}
+                      </>
+                    ))}
+                  </span>
+                )}
+                {img.meta.credits.length > 0 && img.meta.year && <span class="mx-2 text-neutral-500">•</span>}
+                {img.meta.year && <span class="text-neutral-400">{img.meta.year}</span>}
+              </p>
+              {img.meta.description && (
+                <p class="mt-1 text-xs text-neutral-400 max-w-xl mx-auto">{img.meta.description}</p>
+              )}
+            </div>
+          </form>
+        </dialog>
+      ))
+    }
+  </section>
+</Layout>
+
+<style>
+  /* Clean animation override for opening the native dialog */
+  dialog[open] {
+    animation: fadeIn 0.25s ease-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>

@@ -1,0 +1,121 @@
+---
+import type { Form as Props } from '~/types';
+import Button from '~/components/ui/Button.astro';
+
+const {
+  action,
+  method,
+  hiddenInputs,
+  inputs,
+  textarea,
+  disclaimer,
+  button = 'Contact us',
+  description = '',
+} = Astro.props;
+---
+
+<form action={action} method={method}>
+  {hiddenInputs && hiddenInputs.map(({ name, value }) => <input type="hidden" name={name} value={value} />)}
+  {
+    inputs &&
+      inputs.map(
+        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required = false }) =>
+          name && (
+            <div class="mb-6">
+              {label && (
+                <label for={name} class="block text-sm font-medium">
+                  {label}
+                </label>
+              )}
+              <input
+                type={type}
+                name={name}
+                id={name}
+                autocomplete={autocomplete}
+                placeholder={placeholder}
+                required={required}
+                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              />
+            </div>
+          )
+      )
+  }
+
+  {
+    textarea && (
+      <div>
+        <label for="textarea" class="block text-sm font-medium">
+          {textarea.label}
+        </label>
+        <textarea
+          id="textarea"
+          name={textarea.name ? textarea.name : 'message'}
+          rows={textarea.rows ? textarea.rows : 4}
+          placeholder={textarea.placeholder}
+          required={textarea.required}
+          class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+        />
+      </div>
+    )
+  }
+
+  {
+    disclaimer && (
+      <div class="mt-3 flex items-start">
+        <div class="flex mt-0.5">
+          <input
+            id="disclaimer"
+            name="disclaimer"
+            type="checkbox"
+            class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          />
+        </div>
+        <div class="ml-3">
+          <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+            {disclaimer.label}
+          </label>
+        </div>
+      </div>
+    )
+  }
+
+  {
+    button && (
+      <div class="mt-10 grid">
+        <Button
+          variant="primary"
+          type="submit"
+          disabled={!!disclaimer}
+          class="disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {button}
+        </Button>
+      </div>
+    )
+  }
+
+  {
+    description && (
+      <div class="mt-3 text-center">
+        <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+      </div>
+    )
+  }
+</form>
+
+<script>
+  document.querySelectorAll('form').forEach((form) => {
+    const disclaimer = form.querySelector('#disclaimer') as HTMLInputElement | null;
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+
+    if (disclaimer && submitBtn) {
+      // Initialize state on load
+      submitBtn.disabled = !disclaimer.checked;
+
+      // Handle change events
+      disclaimer.addEventListener('change', () => {
+        submitBtn.disabled = !disclaimer.checked;
+      });
+    }
+  });
+</script>

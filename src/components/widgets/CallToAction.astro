@@ -1,0 +1,126 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { CallToAction, Widget } from '~/types';
+import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+import { twMerge } from 'tailwind-merge';
+
+interface Props extends Widget {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  callToAction?: CallToAction;
+  actions?: string | CallToAction[];
+  image?: string | Record<string, unknown>;
+  imagePosition?: 'left' | 'right';
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+  imagePosition = 'right',
+  isBeforeContent = false,
+  isAfterContent = false,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-6xl mx-auto ${isBeforeContent ? 'pb-0 md:pb-0 lg:pb-0' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <div
+    class={twMerge(
+      'max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600 bg-white dark:bg-slate-900',
+      image ? 'max-w-5xl text-left' : ''
+    )}
+  >
+    {
+      image ? (
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          {imagePosition === 'left' && (
+            <div class="relative w-full">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image class="mx-auto rounded-md shadow-lg" widths={[400, 768]} {...image} />
+              )}
+            </div>
+          )}
+          <div class="flex flex-col justify-center text-center md:text-left">
+            <Headline
+              title={title}
+              subtitle={subtitle}
+              tagline={tagline}
+              classes={{
+                container: 'mb-0 md:mb-0',
+                title: 'text-4xl md:text-4xl font-bold tracking-tighter mb-4 font-heading',
+                subtitle: 'text-xl text-muted dark:text-slate-400',
+              }}
+            />
+            {actions && (
+              <div class="max-w-xs sm:max-w-md mx-auto flex flex-nowrap flex-col sm:flex-row justify-center gap-4 mt-6">
+                {Array.isArray(actions) ? (
+                  actions.map((action) => (
+                    <div class="flex w-full sm:w-auto">
+                      <Button {...(action || {})} class="w-full sm:mb-0" />
+                    </div>
+                  ))
+                ) : (
+                  <Fragment set:html={actions} />
+                )}
+              </div>
+            )}
+          </div>
+          {imagePosition !== 'left' && (
+            <div class="relative w-full">
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image class="mx-auto rounded-md shadow-lg" widths={[400, 768]} {...image} />
+              )}
+            </div>
+          )}
+        </div>
+      ) : (
+        <>
+          <Headline
+            title={title}
+            subtitle={subtitle}
+            tagline={tagline}
+            classes={{
+              container: 'mb-0 md:mb-0',
+              title: 'text-4xl md:text-4xl font-bold tracking-tighter mb-4 font-heading',
+              subtitle: 'text-xl text-muted dark:text-slate-400',
+            }}
+          />
+          {actions && (
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
+              {Array.isArray(actions) ? (
+                actions.map((action) => (
+                  <div class="flex w-full sm:w-auto">
+                    <Button {...(action || {})} class="w-full sm:mb-0" />
+                  </div>
+                ))
+              ) : (
+                <Fragment set:html={actions} />
+              )}
+            </div>
+          )}
+        </>
+      )
+    }
+  </div>
+</WidgetWrapper>
