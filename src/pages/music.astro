@@ -4,174 +4,158 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
-  title: 'Music',
+  title: 'Music | Tuesday The Sky',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
-  <HeroText title="Music" tagline="North Sea Echoes" />
+  <HeroText title="Music" tagline="Tuesday The Sky" />
 
-  <!-- Content Widget: How to Cast a Shadow (2026) ****************** -->
+  <!-- Content Widget: Indoor Enthusiast (2026) ****************** -->
   <Content
     isAfterContent
     isBeforeContent
     isReversed={true}
     image={{
-      src: '~/assets/images/HTCAS_cover.jpg',
-      alt: 'North Sea Echoes - How to Cast a Shadow (2026)',
+      src: '~/assets/images/IndoorEnthusiast_cover.png',
+      alt: 'Tuesday The Sky - Indoor Enthusiast',
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4 font-heading">
-        How to Cast a Shadow
-      </h2>
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4 font-heading">Indoor Enthusiast</h2>
       <div class="space-y-4 text-justify">
-        <p>Released on July 24, 2026</p>
+        <p class="text-accent font-semibold">2026 Release</p>
       </div>
       <p>&nbsp;</p>
       <div class="mb-6 font-semibold dark:text-slate-200">
-        <p>Track List</p>
+        <p>Album Details</p>
       </div>
       <div class="space-y-4 text-justify">
         <p>
-          1. A Time of Innocence and Purpose<br />
-          2. Enjoy the View<br />
-          3. Good Enough<br />
-          4. I'll Leave a Light On<br />
-          5. All Fall Away<br />
-          6. Revenge<br />
-          7. Villains or Saints<br />
-          8. What Is and What Was<br />
-          9. All That Comes After<br />
-          10. How to Cast a Shadow
+          The third full-length album from Tuesday The Sky explores intimate, layered instrumental ambience with
+          evocative rhythmic interplay and dynamic guitar expressions.
         </p>
       </div>
       <p>&nbsp;</p>
       <div class="mb-6 font-semibold dark:text-slate-200">
-        <p>Written, Performed, and Recorded By</p>
-        <p>Jim Matheos and Ray Alder</p>
+        <p>Written, Performed, and Produced By</p>
+        <p>Jim Matheos</p>
         <p>&nbsp;</p>
-        <p>Acoustic Drums Performed By</p>
-        <p>Dennis Leeflang</p>
-        <p>&nbsp;</p>
-        <p>Mixed and Produced By Jim Matheos</p>
-        <p>Mastered By Harry Hess at HBomb Mastering</p>
-        <p>&nbsp;</p>
-        <p>All Images Courtesy of Chris Friel</p>
-        <p>Layout and Design By Brian Ames</p>
-        <p>&nbsp;</p>
-        <p>All Songs Written By Jim Matheos and Ray Alder</p>
-        <p>Published By Matheos Music / Horrendous Music / BMG Rights Management / BMI</p>
+        <p>Cover Artwork and Visual Identity</p>
+        <p>
+          Simon Ward (<a href="https://identity-media.co.uk/" target="_blank" class="hover:underline"
+            >identity-media.co.uk</a
+          >)
+        </p>
       </div>
       <div class="mb-6 font-semibold dark:text-slate-200">
-        <hr />
+        <hr class="border-slate-800 my-4" />
         <p>
-          Purchase via <a
-            href="https://www.metalblade.com/northseaechoes/"
+          Stream full album on <a
+            href="https://www.youtube.com/watch?v=cqol-jxZYsE"
             target="_blank"
-            class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-            >metalblade.com/northseaechoes</a
-          > | <a
-            href="https://amzn.to/4eFhDAw"
-            target="_blank"
-            class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-            >Amazon.com</a
-          >
-        </p>
-        <br />
-        <p>
-          Lyrics at <a
-            href="https://genius.com/albums/North-sea-echoes/How-to-cast-a-shadow"
-            target="_blank"
-            class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-            >genius.com/albums/North-sea-echoes/How-to-cast-a-shadow</a
+            class="text-accent hover:underline">YouTube</a
           >
         </p>
       </div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget: Really Good Terrible Things (2024) ****************** -->
+  <!-- Content Widget: The Blurred Horizon (2021) ****************** -->
   <Content
     isBeforeContent
     isReversed={false}
     image={{
-      src: '~/assets/images/RGTT_cover.png',
-      alt: 'North Sea Echoes - Really Good Terrible Things (2024)',
+      src: '~/assets/images/TuesdayTheSky_TheBlurredHorizon_1024.jpg',
+      alt: 'Tuesday The Sky - The Blurred Horizon (2021)',
     }}
   >
     <Fragment slot="content">
       <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4 font-heading">
-        Really Good Terrible Things
+        The Blurred Horizon
       </h2>
       <div class="space-y-4 text-justify">
-        <p>Released on February 23, 2024</p>
+        <p class="text-accent font-semibold">Released September 3, 2021 via Metal Blade Records</p>
       </div>
       <p>&nbsp;</p>
       <div class="mb-6 font-semibold dark:text-slate-200">
         <p>Track List</p>
       </div>
-      <div class="space-y-4 text-justify">
-        <p>
-          1. Open Book<br />
-          2. Flowers In Decay<br />
-          3. Unmoved<br />
-          4. Throwing Stones<br />
-          5. Empty<br />
-          6. The Mission<br />
-          7. Where I'm From<br />
-          8. We Move Around The Sun<br />
-          9. Touch The Sky<br />
-          10. No Maps
-        </p>
+      <div class="space-y-1 text-justify text-sm">
+        <p>1. Half 'Gator</p>
+        <p>2. Clandestine</p>
+        <p>3. The Blurred Horizon</p>
+        <p>4. Everything Is Free</p>
+        <p>5. Hypneurotic</p>
+        <p>6. Later, Then Now</p>
+        <p>7. Near Light</p>
+        <p>8. Half 'Gator (Reprise)</p>
+        <p>9. Vermilion</p>
       </div>
       <p>&nbsp;</p>
       <div class="mb-6 font-semibold dark:text-slate-200">
-        <p>Written, performed, and recorded by Jim Matheos and Ray Alder</p>
-        <p>Live drum performances on Throwing Stones and Empty by Gunnar Olsen</p>
-        <p>Organ on We Move Around The Sun by Abel Boquera</p>
-        <p>Drum mixes on Throwing Stones and Empty by Simone Mularoni</p>
+        <p>Personnel</p>
+        <p>Jim Matheos – Guitars, Keyboards, Bass, Programming</p>
+        <p>Gavin Harrison – Drums on "Hypneurotic" and "Everything Is Free"</p>
         <p>&nbsp;</p>
-        <p>Mixed and produced by Jim Matheos</p>
-        <p>Mastered by Harry Hess at HBomb Mastering</p>
-        <p>&nbsp;</p>
-        <p>Artwork, design, and layout by Simon Ward</p>
-        <p>www.identity-media.co.uk</p>
-        <p>&nbsp;</p>
-        <p>Thanks to-</p>
-        <p>Tracy Vera, Brian Slagel, Anna Walter, Gunnar Olsen, Abel Boquera,</p>
-        <p>Simone Mularoni, Harry Hess, Simon Ward, Tim Bowness,</p>
-        <p>Cecilia Garrido Stratta, David Ballester Garrido,</p>
-        <p>Laurie Matheos, Lindsay Matheos</p>
-        <p>&nbsp;</p>
-        <p>All Songs Written By Jim Matheos and Ray Alder</p>
-        <p>Published By Matheos Music / Horrendous Music / BMG Rights Management / BMI</p>
+        <p>Produced and Mixed by Jim Matheos</p>
+        <p>Mastered by Maor Appelbaum at Maor Appelbaum Mastering</p>
       </div>
       <div class="mb-6 font-semibold dark:text-slate-200">
-        <hr />
+        <hr class="border-slate-800 my-4" />
         <p>
           Purchase via <a
-            href="https://www.metalblade.com/northseaechoes/"
+            href="https://www.metalblade.com/tuesdaythesky"
             target="_blank"
-            class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-            >metalblade.com/northseaechoes</a
-          > | <a
-            href="https://amzn.to/4wdcGWR"
-            target="_blank"
-            class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-            >Amazon.com</a
+            class="text-accent hover:underline">Metal Blade Records</a
           >
         </p>
-        <br />
-        <p>
-          Lyrics at <a
-            href="https://genius.com/albums/North-sea-echoes/Really-good-terrible-things"
-            target="_blank"
-            class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-            >genius.com/albums/North-sea-echoes/Really-good-terrible-things</a
-          >
-        </p>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: Drift (2017) ****************** -->
+  <Content
+    isBeforeContent
+    isReversed={true}
+    image={{
+      src: '~/assets/images/tts_drift_cover_1024.jpg',
+      alt: 'Tuesday The Sky - Drift (2017)',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4 font-heading">Drift</h2>
+      <div class="space-y-4 text-justify">
+        <p class="text-accent font-semibold">Released June 30, 2017 via InsideOut Music</p>
+      </div>
+      <p>&nbsp;</p>
+      <div class="mb-6 font-semibold dark:text-slate-200">
+        <p>Track List</p>
+      </div>
+      <div class="space-y-1 text-justify text-sm">
+        <p>1. Drift</p>
+        <p>2. Stella</p>
+        <p>3. Roger, Gordo</p>
+        <p>4. Westerlies</p>
+        <p>5. Vortex Street</p>
+        <p>6. It Comes in Waves</p>
+        <p>7. Dyatlov Pass</p>
+        <p>8. Far and Distant</p>
+        <p>9. The Rowing</p>
+      </div>
+      <p>&nbsp;</p>
+      <div class="mb-6 font-semibold dark:text-slate-200">
+        <p>Personnel</p>
+        <p>Jim Matheos – Guitars, Synthesizers, Programming</p>
+        <p>Joey Vera – Bass</p>
+        <p>Lloyd Hanney – Drums</p>
+        <p>&nbsp;</p>
+        <p>Produced and Mixed by Jim Matheos</p>
+      </div>
+      <div class="mb-6 font-semibold dark:text-slate-200">
+        <hr class="border-slate-800 my-4" />
+        <p>Listen on streaming platforms worldwide via InsideOut Music.</p>
       </div>
     </Fragment>
   </Content>

@@ -1,36 +1,18 @@
 # Site Notes
 
-## Snippets
+## Tuesday The Sky
 
-### Soundcloud - Enjoy the View
+Notes and references for Tuesday The Sky website.
 
-This was displayed on the main page (index.astro) in a content section:
+### Official Links
 
-```html
-<br />
-<iframe
-  width="100%"
-  height="166"
-  style="border: 0;"
-  allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2306667506&color=ab8469"
-></iframe>
-<div class="text-xs text-muted mt-1 opacity-70">
-  <a
-    href="https://soundcloud.com/metalbladerecords"
-    title="Metal Blade Records"
-    target="_blank"
-    class="hover:underline"
-  >
-    Metal Blade Records </a
-  >{' '} ·{' '}
-  <a
-    href="https://soundcloud.com/metalbladerecords/north-sea-echoes-enjoy-the-view"
-    title="North Sea Echoes - Enjoy the View"
-    target="_blank"
-    class="hover:underline"
-  >
-    North Sea Echoes "Enjoy the View"
-  </a>
-</div>
-```
+- Official Website: [https://tuesdaythesky.com](https://tuesdaythesky.com)
+- Facebook: [https://www.facebook.com/TuesdaytheSky/](https://www.facebook.com/TuesdaytheSky/)
+- Metal Blade Records: [https://www.metalblade.com/tuesdaythesky](https://www.metalblade.com/tuesdaythesky)
+
+### YouTube Video IDs
+
+- Hypneurotic (Official Video): `QnwJl9QPyx0`
+- The Nearest Exit May Be Behind You (Official Video): `fIJgt9gdNak`
+- Vortex Street (Official Video): `rWIq6Wul8Fw`
+- Indoor Enthusiast (Full Album Stream): `cqol-jxZYsE`

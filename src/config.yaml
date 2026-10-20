@@ -1,6 +1,6 @@
 site:
-  name: NORTH SEA ECHOES
-  site: 'https://northseaechoes.com'
+  name: TUESDAY THE SKY
+  site: 'https://tuesdaythesky.com'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: North Sea Echoes
-    template: '%s — North Sea Echoes'
-  description: 'The official website for North Sea Echoes, featuring Ray Alder and Jim Matheos.'
+    default: Tuesday The Sky
+    template: '%s — Tuesday The Sky'
+  description: 'The official website for Tuesday The Sky, featuring Jim Matheos.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: North Sea Echoes
+    site_name: Tuesday The Sky
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@NorthSea_Echoes'
-    site: '@NorthSea_Echoes'
+    handle: '@TuesdayTheSky'
+    site: '@TuesdayTheSky'
     cardType: summary_large_image
 
 i18n:

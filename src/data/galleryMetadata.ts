@@ -22,105 +22,33 @@ export interface ProcessedGalleryImageMeta {
 }
 
 /**
- * Gallery image metadata registry keyed by filename (e.g. '2026_03_DescText.png', '2024_01_KoMvideo.jpg').
+ * Gallery image metadata registry keyed by filename (e.g. '2025_01.jpg', '2021_01.png', etc.).
  * Up to three optional credit entries (each containing name and url) can be specified.
  * The year is always extracted from the filename pattern (e.g. `YYYY_NN`).
  */
 export const galleryMetadata: Record<string, GalleryImageMeta> = {
-  '2024_01.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
+  '2025_01.jpg': {
+    credit1: { name: 'Simon Ward', url: 'https://identity-media.co.uk/' },
+    description: 'Tuesday The Sky - Indoor Enthusiast promotional photo',
   },
-  '2024_02.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
+  '2021_01.png': {
+    credit1: { name: 'Metal Blade Records', url: 'https://www.metalblade.com/' },
+    description: 'Tuesday The Sky - The Blurred Horizon promotional portrait',
   },
-  '2024_03.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
+  '2017_02.jpg': {
+    credit1: { name: 'InsideOut Music', url: '' },
+    description: 'Tuesday The Sky - Drift session photo',
   },
-  '2024_04.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_05.jpg': {
-    credit1: { name: 'Laurie Matheos', url: '' },
-    description: '',
-  },
-  '2024_06.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_07.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_08.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_09.png': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_10.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_11.jpg': {
-    credit1: { name: 'Laurie Matheos', url: '' },
-    description: '',
-  },
-  '2024_12.jpg': {
-    credit1: { name: 'Laurie Matheos', url: '' },
-    description: '',
-  },
-  '2024_13.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_14.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_15.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_16.jpg': {
-    credit1: { name: 'Laurie Matheos', url: '' },
-    description: '',
-  },
-  '2024_17.jpg': {
-    credit1: { name: 'Laurie Matheos', url: '' },
-    description: '',
-  },
-  '2024_18.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2024_19.jpg': {
-    credit1: { name: 'Laurie Matheos', url: '' },
-    description: '',
-  },
-  '2026_01.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2026_02.jpg': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
-  },
-  '2026_03.png': {
-    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
-    description: '',
+  '2017_01.jpg': {
+    credit1: { name: 'InsideOut Music', url: '' },
+    description: 'Tuesday The Sky - Drift promotional portrait',
   },
 };
 
 export function getGalleryImageMeta(filename: string): ProcessedGalleryImageMeta {
   const custom = galleryMetadata[filename] || {};
 
-  // Parse YYYY from filename pattern like 2024_01_KoM.jpg
+  // Parse YYYY from filename pattern like 2025_01.jpg
   const match = filename.match(/^(\d{4})/i) || filename.match(/(\d{4})_\d+/i);
   const year = match ? match[1] : '';
 

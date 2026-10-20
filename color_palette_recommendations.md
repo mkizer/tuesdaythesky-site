@@ -1,67 +1,44 @@
-# Color Palette Recommendations: Espresso & Bronze Theme
+# Color Palette: Obsidian & Crimson Theme
 
-Since the primary background was changed from a cool midnight blue (`#030620`) to a warm espresso brown (`#1B1209`) and the primary accent to bronze (`#3e3016`), continuing to use cool blue-gray **Slate** colors (`slate-800`, `slate-900`, etc.) causes a discord in color temperature.
-
-To create a premium, harmonious, and unified aesthetic, we recommend transition to a **Warm Earth** or **Warm Charcoal (Stone/Zinc)** palette.
+The color palette for **Tuesday The Sky** is derived from the **_Indoor Enthusiast_** album artwork (`src/assets/images/IndoorEnthusiast_cover.png`).
 
 ---
 
-## 1. Recommendation: The "Warm Earth" Palette (Recommended)
+## 1. Palette Overview
 
-This palette uses custom dark wood, sand, and bronze tones to match the deep warmth of the `#1B1209` background.
-
-| Visual Element             | Cool Slate Class (Old)                  | Warm Earth Class/Hex (New)                  | Aesthetic Rationale                                                                         |
-| :------------------------- | :-------------------------------------- | :------------------------------------------ | :------------------------------------------------------------------------------------------ |
-| **Card / Box Background**  | `bg-slate-900` / `bg-slate-800`         | `bg-[#241A0E]` or `bg-stone-900`            | Elevated box that looks like a rich wood card floating on dark espresso.                    |
-| **Hover States / Borders** | `border-slate-600` / `border-slate-700` | `border-[#3e3016]/40` or `border-stone-800` | Replaces cool steely borders with organic bronze borders that tie into the accent color.    |
-| **Muted / Secondary Text** | `text-slate-400` / `text-slate-300`     | `text-stone-300` / `text-[#D4C3B3]`         | Warm sand and parchment text colors, which are significantly easier on the eyes over brown. |
-| **Shadows (Dark Mode)**    | `shadow-slate-900/50`                   | `shadow-[rgba(15,10,5,0.7)]`                | Tinting shadows with a hint of warm brown keeps them soft and natural.                      |
-
----
-
-## 2. Recommendation: The "Warm Charcoal" Palette (Clean / Modern)
-
-If you prefer a clean, neutral slate-like appearance but want to avoid the blue undertones, Tailwind's **Stone** or **Zinc** palettes provide a perfect bridge.
-
-| Element         | Old                | Alternative (Stone)            | Alternative (Zinc)            |
-| :-------------- | :----------------- | :----------------------------- | :---------------------------- |
-| **Backgrounds** | `bg-slate-900`     | `bg-stone-900` (`#1c1917`)     | `bg-zinc-900` (`#18181b`)     |
-| **Borders**     | `border-slate-700` | `border-stone-800` (`#292524`) | `border-zinc-800` (`#27272a`) |
-| **Muted Text**  | `text-slate-400`   | `text-stone-400` (`#a8a29e`)   | `text-zinc-400` (`#a1a1aa`)   |
+| Element              | Light Mode             | Dark Mode                    | Rationale                                                |
+| :------------------- | :--------------------- | :--------------------------- | :------------------------------------------------------- |
+| **Primary Accent**   | `#d62a26` (Crimson)    | `#d62a26` (Vibrant Crimson)  | Matches the bold red title typography of the cover.      |
+| **Secondary Accent** | `#b82420` (Deep Ruby)  | `#b82420` (Ruby)             | Button hover states and interactive depth.               |
+| **Accent Highlight** | `#e04844` (Coral Red)  | `#e04844` (Vivid Coral)      | Focused highlights and micro-interactions.               |
+| **Page Background**  | `#f5f6f8` (Ice Silver) | `#111215` (Obsidian / Slate) | Cool marble tones from the artwork frame and deep space. |
+| **Headings**         | `#0f1115`              | `#f3f4f6`                    | Clean, high-contrast, modern typography.                 |
+| **Default Text**     | `#1e2024`              | `#e2e5ea`                    | Optimal readability across viewports.                    |
+| **Muted Text**       | `rgb(30 32 36 / 66%)`  | `rgb(226 229 234 / 66%)`     | Subdued secondary info and timestamps.                   |
 
 ---
 
-## How to Implement These Globally
+## 2. Slate Color Scale (Cool Steel / Obsidian)
 
-To avoid writing custom inline styles everywhere, we can map these warm alternatives in the Tailwind v4 theme settings and CSS variables:
+Tailwind CSS v4 theme tokens mapped in `src/assets/styles/tailwind.css`:
 
-### A. Update Global CSS Variables in [CustomStyles.astro](file:///c:/Users/Michael/Projects/northseaechoes-site/src/components/CustomStyles.astro)
-
-We can update the text-muted color and borders to use warm parchment/stone values rather than blue-slates:
-
-```diff
-   .dark {
-     ...
-     --aw-color-primary: #3e3016;
-     --aw-color-secondary: #4e3d1c;
--    --aw-color-text-default: rgb(229 236 246);
--    --aw-color-text-muted: rgb(229 236 246 / 66%);
-+    --aw-color-text-default: rgb(240, 235, 228);        /* Soft warm off-white */
-+    --aw-color-text-muted: rgb(200, 190, 175);          /* Sand/taupe muted text */
-     --aw-color-bg-page: #1b1209;
-   }
+```css
+--color-slate-50: #f8fafc;
+--color-slate-100: #f1f4f8;
+--color-slate-200: #e2e7ee;
+--color-slate-300: #cbd4e0;
+--color-slate-400: #94a0b2;
+--color-slate-500: #647287;
+--color-slate-600: #434c5c;
+--color-slate-700: #2d3440;
+--color-slate-800: #1c2028;
+--color-slate-900: #12151b;
+--color-slate-950: #0b0d11;
 ```
 
-### B. Map Card Backgrounds & Borders in [CallToAction.astro](file:///c:/Users/Michael/Projects/northseaechoes-site/src/components/widgets/CallToAction.astro)
+---
 
-Let's update the Call to Action card's dark-mode background and border classes:
+## 3. Implementation Files
 
-```diff
-   <div
-     class={twMerge(
--      'max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600 bg-white dark:bg-slate-900',
-+      'max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-[#3e3016]/40 bg-white dark:bg-[#241A0E]',
-       image ? 'max-w-5xl text-left' : ''
-     )}
-   >
-```
+- **Global CSS Variables**: [CustomStyles.astro](file:///c:/Users/Michael/Projects/tuesdaythesky-site/src/components/CustomStyles.astro)
+- **Tailwind v4 Theme**: [tailwind.css](file:///c:/Users/Michael/Projects/tuesdaythesky-site/src/assets/styles/tailwind.css)

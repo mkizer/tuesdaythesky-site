@@ -13,17 +13,17 @@
   --color-default: var(--aw-color-text-default);
   --color-muted: var(--aw-color-text-muted);
 
-  --color-slate-50: #faf7f2;
-  --color-slate-100: #f5f0e8;
-  --color-slate-200: #e8ded1;
-  --color-slate-300: #eee7dc;
-  --color-slate-400: #d4c3b3;
-  --color-slate-500: #9e8a75;
-  --color-slate-600: #4e3d1c;
-  --color-slate-700: #3e3016;
-  --color-slate-800: #2e2215;
-  --color-slate-900: #241a0e;
-  --color-slate-950: #0e0905;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f4f8;
+  --color-slate-200: #e2e7ee;
+  --color-slate-300: #cbd4e0;
+  --color-slate-400: #94a0b2;
+  --color-slate-500: #647287;
+  --color-slate-600: #434c5c;
+  --color-slate-700: #2d3440;
+  --color-slate-800: #1c2028;
+  --color-slate-900: #12151b;
+  --color-slate-950: #0b0d11;
 
   --font-sans:
     'var(--aw-font-sans, ui-sans-serif)', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -89,7 +89,7 @@
 
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-[#1B1209] border-b border-gray-500/20;
+  @apply bg-page md:bg-[#111215] border-b border-gray-500/20;
   box-shadow: none;
 }
 

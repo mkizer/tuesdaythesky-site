@@ -21,7 +21,7 @@ For the purposes of these Terms and Conditions:
 
 - **Country** refers to: California, United States
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to North Sea Echoes.
+- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Tuesday The Sky.
 
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 
@@ -31,7 +31,7 @@ For the purposes of these Terms and Conditions:
 
 - **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
 
-- **Website** refers to North Sea Echoes, accessible from [https://northseaechoes.com](https://northseaechoes.com)
+- **Website** refers to Tuesday The Sky, accessible from [https://tuesdaythesky.com](https://tuesdaythesky.com)
 
 - **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
@@ -49,7 +49,7 @@ Your access to and use of the Service is also conditioned on Your acceptance of 
 
 ## Intellectual Property
 
-The Website and its original content, features, and functionality (including but not limited to all music, audio streams, lyric texts, artwork, photography, and design elements) are and will remain the exclusive property of North Sea Echoes and its licensors. You may not copy, reproduce, distribute, perform, or display any part of this content without our prior written consent.
+The Website and its original content, features, and functionality (including but not limited to all music, audio streams, lyric texts, artwork, photography, and design elements) are and will remain the exclusive property of Tuesday The Sky and its licensors. You may not copy, reproduce, distribute, perform, or display any part of this content without our prior written consent.
 
 ## Links to Other Websites
 
@@ -121,4 +121,4 @@ By continuing to access or use Our Service after those revisions become effectiv
 
 If you have any questions about these Terms and Conditions, You can contact us:
 
-- By email: contact@northseaechoes.com
+- By email: contact@tuesdaythesky.com
