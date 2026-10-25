@@ -28,19 +28,19 @@ export interface ProcessedGalleryImageMeta {
  */
 export const galleryMetadata: Record<string, GalleryImageMeta> = {
   '2025_01.jpg': {
-    credit1: { name: 'Simon Ward', url: 'https://identity-media.co.uk/' },
+    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
     description: 'Tuesday The Sky - Indoor Enthusiast promotional photo',
   },
   '2021_01.png': {
-    credit1: { name: 'Metal Blade Records', url: 'https://www.metalblade.com/' },
+    credit1: { name: 'Jeremy Saffer', url: 'https://jeremysaffer.com/' },
     description: 'Tuesday The Sky - The Blurred Horizon promotional portrait',
   },
   '2017_02.jpg': {
-    credit1: { name: 'InsideOut Music', url: '' },
-    description: 'Tuesday The Sky - Drift session photo',
+    credit1: { name: 'Markus Wiedenmann', url: 'https://www.instagram.com/markus.wiedenmann.photography/' },
+    description: 'Jim Matheos (Fates Warning) Haarlem 2017',
   },
   '2017_01.jpg': {
-    credit1: { name: 'InsideOut Music', url: '' },
+    credit1: { name: 'Lindsay Matheos', url: '' },
     description: 'Tuesday The Sky - Drift promotional portrait',
   },
 };
