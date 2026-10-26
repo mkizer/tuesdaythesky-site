@@ -45,15 +45,15 @@ By accessing or using the Service You agree to be bound by these Terms and Condi
 
 You represent that you are at least 13 years of age. If you are under 18, you represent that you have your parent or guardian's permission to use the Service.
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
 
 ## Intellectual Property
 
-The Website and its original content, features, and functionality (including but not limited to all music, audio streams, lyric texts, artwork, photography, and design elements) are and will remain the exclusive property of Tuesday The Sky and its licensors. You may not copy, reproduce, distribute, perform, or display any part of this content without our prior written consent.
+The Website and its original content, features, and functionality (including but not limited to all music, audio streams, artwork, photography, and design elements) are and will remain the exclusive property of Tuesday The Sky and its licensors. You may not copy, reproduce, distribute, perform, or display any part of this content without our prior written consent.
 
 ## Links to Other Websites
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company, including music streaming services, social media platforms, and merchandise distributors.
 
 The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
 
@@ -67,7 +67,7 @@ Upon termination, Your right to use the Service will cease immediately.
 
 ## Limitation of Liability
 
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to 100 USD.
 
 To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
 
@@ -83,7 +83,7 @@ Some jurisdictions do not allow the exclusion of certain types of warranties or 
 
 ## Governing Law
 
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Service may also be subject to other local, state, national, or international laws.
 
 ## Disputes Resolution
 
